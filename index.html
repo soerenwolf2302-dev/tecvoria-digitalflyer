@@ -1,81 +1,72 @@
 <!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>TECVORIA Technologies – Digitalflyer</title><style>
-:root{--n:#020b14;--c:#55c8ff;--m:#ef4da8;--t:#edf8ff;--s:#b9d5e6}
-*{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;overflow:hidden}
+:root{--c:#55c8ff;--m:#ef4da8;--t:#f4fbff;--s:#c9deea}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
 body{background:radial-gradient(circle at 18% 8%,#0b314a 0,#03121e 36%,#01070c 100%);color:var(--t);font-family:Arial,sans-serif}
-header{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;color:var(--c);font-weight:800;letter-spacing:.13em;font-size:13px}
-#stage{height:calc(100dvh - 108px);display:flex;align-items:center;justify-content:center;padding:8px;perspective:2200px}
-.book{position:relative;aspect-ratio:3/2;width:min(94vw,1100px,calc((100dvh - 124px)*1.5));height:auto;transform-style:preserve-3d}
-.page{position:absolute;inset:0;padding:5% 6%;border-radius:12px;overflow:hidden;background:linear-gradient(145deg,#061c2d,#020a12 70%);border:1px solid #15435f;box-shadow:0 30px 70px #0009;backface-visibility:hidden;transform-origin:left center;transition:transform .72s cubic-bezier(.55,.06,.3,.95),opacity .35s;display:flex;flex-direction:column}
-.page:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#46bfff0c 1px,transparent 1px),linear-gradient(90deg,#46bfff0c 1px,transparent 1px);background-size:36px 36px}
+header{height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;color:var(--c);font-weight:800;letter-spacing:.12em;font-size:14px}
+#stage{height:calc(100dvh - 104px);display:flex;align-items:center;justify-content:center;padding:8px;perspective:2200px}
+.book{position:relative;width:min(96vw,1200px);height:min(calc(100dvh - 120px),720px);transform-style:preserve-3d}
+.page{position:absolute;inset:0;padding:28px 42px 24px;border-radius:14px;overflow:hidden;background:linear-gradient(145deg,#061c2d,#020a12 70%);border:1px solid #1c5777;box-shadow:0 24px 60px #0009;backface-visibility:hidden;transform-origin:left center;transition:transform .72s cubic-bezier(.55,.06,.3,.95),opacity .35s;display:flex;flex-direction:column}
+.page:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#46bfff0c 1px,transparent 1px),linear-gradient(90deg,#46bfff0c 1px,transparent 1px);background-size:38px 38px}
 .page:after{content:"✦ · ✦ · ✦";position:absolute;right:5%;top:5%;color:var(--m);letter-spacing:12px;text-shadow:0 0 12px var(--m)}
 .page.flipped{transform:rotateY(-180deg);opacity:.15}
-.k{color:var(--m);font-weight:800;letter-spacing:.16em;font-size:clamp(9px,1.05vw,16px);margin-bottom:2%}
-h1{font-size:clamp(28px,4.6vw,70px);line-height:.96;margin:0 0 2%;max-width:88%}
-h2{font-size:clamp(24px,3.6vw,54px);line-height:1;margin:0 0 2.5%;max-width:90%}
-.sub{font-size:clamp(12px,1.5vw,22px);line-height:1.35;color:var(--s);max-width:82%}
+.k{color:var(--m);font-weight:800;letter-spacing:.15em;font-size:16px;margin-bottom:12px}
+h1{font-size:clamp(38px,5vw,72px);line-height:.98;margin:0 0 16px;max-width:92%}
+h2{font-size:clamp(32px,4vw,56px);line-height:1;margin:0 0 16px;max-width:94%}
+.sub{font-size:clamp(18px,1.8vw,25px);line-height:1.3;color:var(--s);max-width:90%}
 .accent{color:var(--c)}.mag{color:var(--m)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:8px;margin-top:0;flex:1;min-height:0}
-.grid.four{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:minmax(0,1fr)}
-.card{position:relative;background:linear-gradient(145deg,#092b42,#051623);border:1px solid #1b5a7b;border-radius:12px;padding:10px;display:flex;flex-direction:column;justify-content:center;min-height:0;overflow:hidden}
-.card b{color:var(--c);font-size:clamp(10px,1.35vw,20px);line-height:1.08;margin-bottom:5px}
-.card span{color:var(--s);font-size:clamp(8px,.95vw,15px);line-height:1.25}
-.center{align-items:center;text-align:center;justify-content:center}
-.center h1,.center .sub{max-width:90%}
-.flow{display:flex;gap:2%;margin-top:3%;width:100%;justify-content:center}
-.pill{border:1px solid #2579a4;background:#072338;border-radius:999px;padding:10px 16px;font-weight:800;color:var(--c);font-size:clamp(9px,.95vw,14px)}
-.contact{margin-top:auto;color:var(--s);font-size:clamp(9px,1vw,15px);line-height:1.35}.contact b{color:var(--t)}
-.fold{position:absolute;right:0;bottom:0;width:72px;height:72px;z-index:50;border:0;cursor:pointer;clip-path:polygon(100% 0,100% 100%,0 100%);background:linear-gradient(135deg,transparent 0 47%,var(--m) 48%,var(--c) 100%);filter:drop-shadow(-5px -5px 10px #49bfff44)}
-nav{height:50px;display:flex;align-items:center;justify-content:center;gap:14px}
-nav button{border:1px solid #26688a;background:#062236;color:white;border-radius:999px;padding:9px 18px;font-weight:700}
-#count{min-width:85px;text-align:center;color:var(--s);font-weight:700}
-.audioctl{position:fixed;right:18px;top:70px;z-index:1000;display:flex;gap:8px;align-items:center;background:#031521dd;border:1px solid #2579a4;border-radius:999px;padding:7px 10px;box-shadow:0 8px 28px #0008}
-.audioctl button{border:0;background:transparent;color:#edf8ff;font-weight:800;cursor:pointer}.audioctl input{width:74px;accent-color:#ef4da8}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:12px;flex:1;min-height:0}
+.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:linear-gradient(145deg,#092b42,#051623);border:1px solid #1b5a7b;border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;justify-content:center;min-height:0;overflow:hidden}
+.card b{color:var(--c);font-size:clamp(15px,1.35vw,20px);line-height:1.08;margin-bottom:6px}
+.card span{color:var(--s);font-size:clamp(13px,1.05vw,16px);line-height:1.25}
+.center{align-items:center;text-align:center;justify-content:center}.center h1,.center .sub{max-width:92%}
+.flow{display:flex;gap:12px;margin-top:24px;width:100%;justify-content:center}
+.pill{border:1px solid #2579a4;background:#072338;border-radius:999px;padding:10px 18px;font-weight:800;color:var(--c);font-size:14px}
+.contact{margin-top:auto;color:var(--s);font-size:14px;line-height:1.4}.contact b{color:var(--t)}
+.fold{position:absolute;right:0;bottom:0;width:70px;height:70px;z-index:50;border:0;cursor:pointer;clip-path:polygon(100% 0,100% 100%,0 100%);background:linear-gradient(135deg,transparent 0 47%,var(--m) 48%,var(--c) 100%)}
+nav{height:52px;display:flex;align-items:center;justify-content:center;gap:14px}nav button{border:1px solid #26688a;background:#062236;color:white;border-radius:999px;padding:9px 20px;font-weight:700;font-size:14px}#count{min-width:85px;text-align:center;color:var(--s);font-weight:700}
+.audioctl{position:fixed;right:18px;top:62px;z-index:1000;display:flex;gap:8px;align-items:center;background:#031521e8;border:1px solid #2579a4;border-radius:999px;padding:7px 10px}.audioctl button{border:0;background:transparent;color:#edf8ff;font-weight:800}.audioctl input{width:74px;accent-color:#ef4da8}
 
-@media (max-width:700px) and (orientation:portrait){
- header{height:46px;font-size:10px}
- #stage{height:calc(100dvh - 96px);padding:6px}
- .book{width:96vw;max-width:calc((100dvh - 110px)*1.5)}
- .page{padding:5% 6%}
- h1{font-size:clamp(25px,7vw,42px)} h2{font-size:clamp(22px,6vw,36px)}
- .sub{font-size:clamp(11px,3vw,16px)}
- .grid{gap:6px}.card{padding:7px;border-radius:9px}
- .card b{font-size:clamp(8px,2.3vw,12px);margin-bottom:3px}.card span{font-size:clamp(7px,1.9vw,10px);line-height:1.2}
- .contact{font-size:clamp(7px,2vw,10px)}
- .pill{padding:6px 8px;font-size:clamp(7px,2vw,10px)}
- .fold{width:54px;height:54px}
- .audioctl{top:52px;right:8px;padding:5px 8px;transform:scale(.88);transform-origin:top right}.audioctl input{width:54px}
+@media (orientation:landscape) and (max-height:750px){
+ header{height:34px;padding:0 3vw;font-size:11px}
+ #stage{height:calc(100dvh - 72px);padding:4px 8px}
+ .book{width:calc(100vw - 16px);height:calc(100dvh - 80px);max-width:none}
+ .page{padding:18px 32px 14px}
+ .k{font-size:13px;margin-bottom:7px}
+ h1{font-size:clamp(34px,4.3vw,58px);margin-bottom:10px}
+ h2{font-size:clamp(29px,3.5vw,46px);margin-bottom:10px}
+ .sub{font-size:clamp(15px,1.45vw,20px)}
+ .grid{gap:9px}
+ .card{padding:9px 11px}
+ .card b{font-size:clamp(13px,1.3vw,17px);margin-bottom:4px}
+ .card span{font-size:clamp(11px,1.08vw,14px);line-height:1.2}
+ .contact{font-size:clamp(10px,1vw,13px);line-height:1.25}
+ .flow{margin-top:14px;gap:8px}.pill{padding:7px 13px;font-size:12px}
+ .fold{width:52px;height:52px}
+ nav{height:38px}nav button{padding:6px 15px;font-size:12px}
+ .audioctl{top:38px;right:8px;transform:scale(.78);transform-origin:top right}
 }
 
-@media (orientation:landscape) and (max-height:700px){
- header{height:34px;padding:0 3vw;font-size:9px}
- #stage{height:calc(100dvh - 70px);padding:3px 8px}
- .book{width:min(92vw,calc((100dvh - 78px)*1.5));max-width:none}
- .page{padding:3% 4.5%}
- .k{font-size:clamp(7px,1vw,10px);margin-bottom:.8%}
- h1{font-size:clamp(21px,3.5vw,42px);margin-bottom:1%}
- h2{font-size:clamp(19px,3vw,35px);margin-bottom:1%}
- .sub{font-size:clamp(8px,1.15vw,12px);line-height:1.15}
- .grid{gap:5px}
- .card{padding:5px 7px;border-radius:8px}
- .card b{font-size:clamp(7px,1vw,10px);line-height:1.05;margin-bottom:2px}
- .card span{font-size:clamp(6px,.82vw,8px);line-height:1.1}
- .contact{font-size:clamp(6px,.82vw,8px);line-height:1.12}
- .flow{margin-top:1.5%;gap:5px}.pill{padding:4px 7px;font-size:clamp(6px,.82vw,8px)}
- .fold{width:42px;height:42px}
- nav{height:36px} nav button{padding:6px 14px;font-size:11px}
- .audioctl{top:38px;right:8px;padding:4px 7px;transform:scale(.68);transform-origin:top right}.audioctl input{width:54px}
+@media (orientation:portrait){
+ header{height:48px;padding:0 5vw;font-size:10px}
+ #stage{height:calc(100dvh - 100px);padding:8px}
+ .book{width:calc(100vw - 16px);height:min(72vh,760px)}
+ .page{padding:28px 24px 22px}
+ .k{font-size:13px;margin-bottom:10px}
+ h1{font-size:clamp(34px,8vw,52px);margin-bottom:14px}
+ h2{font-size:clamp(29px,7vw,44px);margin-bottom:14px}
+ .sub{font-size:clamp(16px,4vw,21px)}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .card{padding:10px}
+ .card b{font-size:clamp(13px,3.3vw,17px)}
+ .card span{font-size:clamp(11px,2.8vw,14px)}
+ .contact{font-size:clamp(10px,2.7vw,13px)}
+ .flow{flex-wrap:wrap;margin-top:18px}.pill{font-size:11px;padding:7px 10px}
+ .fold{width:58px;height:58px}
+ .audioctl{top:54px;right:8px;transform:scale(.88);transform-origin:top right}
 }
-@media (orientation:landscape) and (max-height:700px){
-  #stage{padding-left:2px;padding-right:2px}
-  .book{width:calc(100vw - 12px);max-width:none;aspect-ratio:auto;height:calc(100dvh - 78px)}
-  .page{padding:2.7% 3.4%}
-  .grid{gap:7px}
-  .card{padding:7px 9px}
-  .card b{font-size:clamp(9px,1.25vw,13px)}
-  .card span{font-size:clamp(8px,1.02vw,11px);line-height:1.18}
-  .contact{font-size:clamp(7px,.95vw,10px)}
-}</style></head><body><audio id="bgmusic" loop preload="metadata" playsinline webkit-playsinline><source src="./music.mp3?v=4" type="audio/mpeg"></audio><div class="audioctl"><button id="musicBtn" type="button">🔊 MUSIK AN</button><input id="volume" type="range" min="0" max="1" step="0.05" value="0.28" aria-label="Lautstärke"></div><header><span>TECVORIA TECHNOLOGIES</span><span style="color:#b9d5e6;font-weight:400;letter-spacing:0">Wischen · Klicken · Blättern</span></header><main id="stage"><div class="book" id="book">
+</style></head><body><audio id="bgmusic" loop preload="metadata" playsinline webkit-playsinline><source src="./music.mp3?v=4" type="audio/mpeg"></audio><div class="audioctl"><button id="musicBtn" type="button">🔊 MUSIK AN</button><input id="volume" type="range" min="0" max="1" step="0.05" value="0.28" aria-label="Lautstärke"></div><header><span>TECVORIA TECHNOLOGIES</span><span style="color:#b9d5e6;font-weight:400;letter-spacing:0">Wischen · Klicken · Blättern</span></header><main id="stage"><div class="book" id="book">
 <section class="page center"><div class="k">TECVORIA TECHNOLOGIES</div><h1>TECHNOLOGIE, DIE SICH <span class="accent">IHREM ALLTAG</span> ANPASST.</h1><div class="sub">Software · Apps · Schnittstellen · Cloud Solutions</div><div class="flow"><div class="pill">VERSTEHEN</div><div class="pill">PLANEN</div><div class="pill">VERBINDEN</div><div class="pill">BETREUEN</div></div><div class="contact"><b>Sören Wolf</b> · TECVORIA Technologies<br>Sölgerding 3 · 84140 Gangkofen · +49 179 7079769 · tecvoria@web.de<br><a href="https://soerenwolf2302-dev.github.io/tecvoria-digitalflyer/" style="color:var(--c);text-decoration:none;font-weight:700">tecvoria.de/flyer</a></div></section>
 <section class="page"><div class="k">01 · DAS TECVORIA-PRINZIP</div><h2>Ihre IT. <span class="accent">Modular statt kompliziert.</span></h2><div class="grid four"><div class="card"><b>ANALYSE</b><span>Verstehen, was vorhanden ist und wo es hakt.</span></div><div class="card"><b>BERATUNG</b><span>Möglichkeiten verständlich und praxisnah einordnen.</span></div><div class="card"><b>PLANUNG</b><span>Ein klarer Fahrplan mit passenden Bausteinen.</span></div><div class="card"><b>UMSETZUNG</b><span>Technik verbinden, entwickeln, testen und begleiten.</span></div></div><div class="contact">TEST · DOKUMENTATION · SUPPORT</div></section>
 <section class="page"><div class="k">02 · WAS TECVORIA FÜR SIE LÖSEN KANN</div><h2>IT-Lösungen, <span class="accent">die zu Ihnen passen.</span></h2><div class="grid four"><div class="card"><b>SOFTWARE & APPS</b><span>Individuelle digitale Anwendungen.</span></div><div class="card"><b>SCHNITTSTELLEN</b><span>Systeme und Daten sinnvoll verbinden.</span></div><div class="card"><b>DIGITALISIERUNG</b><span>Abläufe vereinfachen und automatisieren.</span></div><div class="card"><b>SYSTEMINTEGRATION</b><span>Hard- und Software zusammenbringen.</span></div><div class="card"><b>MIGRATION</b><span>Daten und Systeme sicher weiterführen.</span></div><div class="card"><b>CLOUD & DEVOPS</b><span>Skalierbare technische Grundlagen.</span></div><div class="card"><b>CODE-ÜBERNAHME</b><span>Bestehenden Code prüfen und weiterentwickeln.</span></div><div class="card"><b>REMOTE-SUPPORT</b><span>Schnelle Unterstützung per Fernzugriff.</span></div></div><div class="contact"><b>Qualifikation:</b> DevOps & Cloud Computing Engineer</div></section>
