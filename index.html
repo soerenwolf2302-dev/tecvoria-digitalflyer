@@ -64,7 +64,31 @@ nav{height:46px;display:flex;align-items:center;justify-content:center;gap:14px}
  .fold{width:55px;height:55px}
  .audioctl{top:49px;right:6px;transform:scale(.84);transform-origin:top right}
 }
-</style></head><body><audio id="bgmusic" loop preload="metadata" playsinline webkit-playsinline><source src="./music.mp3?v=4" type="audio/mpeg"></audio><div class="audioctl"><button id="musicBtn" type="button">🔊 MUSIK AN</button><input id="volume" type="range" min="0" max="1" step="0.05" value="0.28" aria-label="Lautstärke"></div><header><span>TECVORIA TECHNOLOGIES</span><span style="color:#b9d5e6;font-weight:400;letter-spacing:0">Wischen · Klicken · Blättern</span></header><main id="stage"><div class="book" id="book">
+@media (orientation:portrait){
+  header{height:44px}
+  #stage{height:calc(100dvh - 94px);padding:4px 0;overflow:hidden}
+  .book{
+    width:calc((100dvh - 106px) * 1.78);
+    height:calc(100dvh - 106px);
+    max-width:none;
+    flex:none;
+    transform:scale(.96);
+    transform-origin:center center;
+  }
+  .page{padding:22px 34px 18px}
+  .k{font-size:clamp(12px,2.5vw,15px);margin-bottom:7px}
+  h1{font-size:clamp(32px,7vw,54px);margin-bottom:10px}
+  h2{font-size:clamp(28px,6vw,46px);margin-bottom:10px}
+  .sub{font-size:clamp(15px,3.2vw,20px)}
+  .grid,.grid.four{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+  .card{padding:8px 10px}
+  .card b{font-size:clamp(13px,2.7vw,17px);margin-bottom:4px}
+  .card span{font-size:clamp(11px,2.3vw,14px);line-height:1.18}
+  .contact{font-size:clamp(10px,2.2vw,13px)}
+  .flow{flex-wrap:nowrap;margin-top:12px;gap:7px}
+  .pill{font-size:11px;padding:6px 10px}
+  .fold{width:50px;height:50px}
+}</style></head><body><audio id="bgmusic" loop preload="metadata" playsinline webkit-playsinline><source src="./music.mp3?v=4" type="audio/mpeg"></audio><div class="audioctl"><button id="musicBtn" type="button">🔊 MUSIK AN</button><input id="volume" type="range" min="0" max="1" step="0.05" value="0.28" aria-label="Lautstärke"></div><header><span>TECVORIA TECHNOLOGIES</span><span style="color:#b9d5e6;font-weight:400;letter-spacing:0">Wischen · Klicken · Blättern</span></header><main id="stage"><div class="book" id="book">
 <section class="page center"><div class="k">TECVORIA TECHNOLOGIES</div><h1>TECHNOLOGIE, DIE SICH <span class="accent">IHREM ALLTAG</span> ANPASST.</h1><div class="sub">Software · Apps · Schnittstellen · Cloud Solutions</div><div class="flow"><div class="pill">VERSTEHEN</div><div class="pill">PLANEN</div><div class="pill">VERBINDEN</div><div class="pill">BETREUEN</div></div><div class="contact"><b>Sören Wolf</b> · TECVORIA Technologies<br>Sölgerding 3 · 84140 Gangkofen · +49 179 7079769 · tecvoria@web.de<br><a href="https://soerenwolf2302-dev.github.io/tecvoria-digitalflyer/" style="color:var(--c);text-decoration:none;font-weight:700">tecvoria.de/flyer</a></div></section>
 <section class="page"><div class="k">01 · DAS TECVORIA-PRINZIP</div><h2>Ihre IT. <span class="accent">Modular statt kompliziert.</span></h2><div class="grid four"><div class="card"><b>ANALYSE</b><span>Verstehen, was vorhanden ist und wo es hakt.</span></div><div class="card"><b>BERATUNG</b><span>Möglichkeiten verständlich und praxisnah einordnen.</span></div><div class="card"><b>PLANUNG</b><span>Ein klarer Fahrplan mit passenden Bausteinen.</span></div><div class="card"><b>UMSETZUNG</b><span>Technik verbinden, entwickeln, testen und begleiten.</span></div></div><div class="contact">TEST · DOKUMENTATION · SUPPORT</div></section>
 <section class="page"><div class="k">02 · WAS TECVORIA FÜR SIE LÖSEN KANN</div><h2>IT-Lösungen, <span class="accent">die zu Ihnen passen.</span></h2><div class="grid four"><div class="card"><b>SOFTWARE & APPS</b><span>Individuelle digitale Anwendungen.</span></div><div class="card"><b>SCHNITTSTELLEN</b><span>Systeme und Daten sinnvoll verbinden.</span></div><div class="card"><b>DIGITALISIERUNG</b><span>Abläufe vereinfachen und automatisieren.</span></div><div class="card"><b>SYSTEMINTEGRATION</b><span>Hard- und Software zusammenbringen.</span></div><div class="card"><b>MIGRATION</b><span>Daten und Systeme sicher weiterführen.</span></div><div class="card"><b>CLOUD & DEVOPS</b><span>Skalierbare technische Grundlagen.</span></div><div class="card"><b>CODE-ÜBERNAHME</b><span>Bestehenden Code prüfen und weiterentwickeln.</span></div><div class="card"><b>REMOTE-SUPPORT</b><span>Schnelle Unterstützung per Fernzugriff.</span></div></div><div class="contact"><b>Qualifikation:</b> DevOps & Cloud Computing Engineer</div></section>
