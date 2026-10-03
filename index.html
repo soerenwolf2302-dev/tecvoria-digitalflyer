@@ -111,6 +111,25 @@ nav{height:46px;display:flex;align-items:center;justify-content:center;gap:14px}
   .flow{flex-wrap:nowrap;margin-top:2%;gap:5px}
   .pill{font-size:clamp(7px,2vw,10px);padding:5px 7px}
   .fold{width:44px;height:44px}
+}@media (orientation:portrait){
+  #stage{height:calc(100dvh - 94px);padding:8px;align-items:center;justify-content:center}
+  .book{width:calc(100vw - 20px);height:56vw;max-width:none;aspect-ratio:auto;transform:none}
+  .page{padding:4% 5%;border-radius:10px}
+  .center{justify-content:center}
+  .k{font-size:clamp(8px,2.4vw,12px);margin-bottom:1%}
+  h1{font-size:clamp(20px,6.4vw,38px);line-height:1.02;margin-bottom:1.5%;max-width:96%}
+  h2{font-size:clamp(18px,5.5vw,32px);line-height:1.02;margin-bottom:1.5%;max-width:96%}
+  .sub{font-size:clamp(10px,2.8vw,16px);line-height:1.15}
+  .grid{gap:5px}
+  .grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .card{padding:5px 6px;border-radius:8px}
+  .card b{font-size:clamp(7px,2vw,11px);margin-bottom:2px}
+  .card span{font-size:clamp(6px,1.65vw,9px);line-height:1.1}
+  .contact{font-size:clamp(6px,1.7vw,9px);line-height:1.12}
+  .flow{flex-wrap:nowrap;margin-top:2%;gap:4px}
+  .pill{font-size:clamp(6px,1.8vw,9px);padding:4px 6px}
+  .fold{width:38px;height:38px}
+  .audioctl{top:49px;right:6px;transform:scale(.76);transform-origin:top right}
 }</style></head><body><audio id="bgmusic" loop preload="metadata" playsinline webkit-playsinline><source src="./music.mp3?v=4" type="audio/mpeg"></audio><div class="audioctl"><button id="musicBtn" type="button">🔊 MUSIK AN</button><input id="volume" type="range" min="0" max="1" step="0.05" value="0.28" aria-label="Lautstärke"></div><header><span>TECVORIA TECHNOLOGIES</span><span style="color:#b9d5e6;font-weight:400;letter-spacing:0">Wischen · Klicken · Blättern</span></header><main id="stage"><div class="book" id="book">
 <section class="page center"><div class="k">TECVORIA TECHNOLOGIES</div><h1>TECHNOLOGIE, DIE SICH <span class="accent">IHREM ALLTAG</span> ANPASST.</h1><div class="sub">Software · Apps · Schnittstellen · Cloud Solutions</div><div class="flow"><div class="pill">VERSTEHEN</div><div class="pill">PLANEN</div><div class="pill">VERBINDEN</div><div class="pill">BETREUEN</div></div><div class="contact"><b>Sören Wolf</b> · TECVORIA Technologies<br>Sölgerding 3 · 84140 Gangkofen · +49 179 7079769 · tecvoria@web.de<br><a href="https://soerenwolf2302-dev.github.io/tecvoria-digitalflyer/" style="color:var(--c);text-decoration:none;font-weight:700">tecvoria.de/flyer</a></div></section>
 <section class="page"><div class="k">01 · DAS TECVORIA-PRINZIP</div><h2>Ihre IT. <span class="accent">Modular statt kompliziert.</span></h2><div class="grid four"><div class="card"><b>ANALYSE</b><span>Verstehen, was vorhanden ist und wo es hakt.</span></div><div class="card"><b>BERATUNG</b><span>Möglichkeiten verständlich und praxisnah einordnen.</span></div><div class="card"><b>PLANUNG</b><span>Ein klarer Fahrplan mit passenden Bausteinen.</span></div><div class="card"><b>UMSETZUNG</b><span>Technik verbinden, entwickeln, testen und begleiten.</span></div></div><div class="contact">TEST · DOKUMENTATION · SUPPORT</div></section>
